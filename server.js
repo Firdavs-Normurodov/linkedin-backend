@@ -38,7 +38,9 @@ app.use(
     credentials: true,
   })
 );
-
+app.get("/", (req, res) => {
+  res.send("hello world");
+});
 // API marshrutlari
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/users", userRoutes);
